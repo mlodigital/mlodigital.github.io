@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Masne Powiedzonko</title>
+</head>
+
+<body>
+   <div class="main_container">
+      <h1>Twoje masne powiedzonko na dziś to</h1>
+      <h1><i id="masny_placeholder">"masno"</i></h1>
+   </div>
+</body>
+<style>
+   .main_container {
+      position: fixed;
+      top: 45%;
+      left: 0;
+      right: 0;
+      transform: translate(0, -50%);
+      text-align: center;
+
+      background-color: #999;
+   }
+
+</style>
+<script>
+   var powiedzonka = new Array(){
+      "Zrób mi kurwa louda",
+      "Zrób mi louda nie żartuj",
+      "Nie zgrywaj Bonda",
+      "GRZIBY!!!",
+      "KURWA NAUUURA",
+      "RÓB LOUDA!"
+   }
+   var masny_placeholder = document.getElementById("masny_placeholder");
+   
+   document.body.onload = function(){
+      masny_placeholder.innerHTML = '"' + powiedzonka[Math.floor(Math.random() * powiedzonka.length)] + '"';   
+   };
+</script>
+</html>
